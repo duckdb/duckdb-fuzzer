@@ -1,0 +1,55 @@
+# name: test/fuzzer/afl/parquet_multi_param_fuzzer-ef50246314b2f80dcf6a8132db45a80dab7dd162.test
+# description: fuzzer generated parquet files - should not raise internal exception (by failed assertion).
+# group: [parquet]
+
+require parquet
+
+query I
+select count(file) from glob('./data/parquet-testing/afl/13439225321_parquet_fuzz_error/*');
+----
+11
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_0.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_1.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_2.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_3.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_4.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_5.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_6.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_7.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_8.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_9.parquet', filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/13439225321_parquet_fuzz_error/case_10.parquet', filename=true);
+----
+

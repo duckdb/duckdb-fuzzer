@@ -1,0 +1,10 @@
+[
+    {
+        "file_name": "case_0.json",
+        "arguments": "columns={'v':'VARCHAR','k':'VA'>h->S}, ignore_errors=true"
+    },
+    {
+        "file_name": "case_1.json",
+        "arguments": "sample_size=1"
+    }
+]

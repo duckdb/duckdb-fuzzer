@@ -1,0 +1,62 @@
+[
+    {
+        "file_name": "case_0.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_1.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_2.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_3.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_4.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_5.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_6.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_7.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_8.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_9.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_10.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_11.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=2821266740684990247"
+    },
+    {
+        "file_name": "case_12.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_13.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, rejects_limit=658694493994253607"
+    },
+    {
+        "file_name": "case_14.csv",
+        "arguments": "auto_detect=false, columns={'json': 'JSON'}, delim=NULL, buffer_size=42, store_rejects=true, store_rejects=true"
+    }
+]

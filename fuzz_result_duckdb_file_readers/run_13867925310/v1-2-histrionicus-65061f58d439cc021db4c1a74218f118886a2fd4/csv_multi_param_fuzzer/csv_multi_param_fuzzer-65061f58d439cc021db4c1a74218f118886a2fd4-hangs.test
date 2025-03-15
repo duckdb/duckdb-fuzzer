@@ -1,0 +1,66 @@
+# name: test/fuzzer/afl/csv_multi_param_fuzzer-65061f58d439cc021db4c1a74218f118886a2fd4-hangs.test
+# description: fuzzer generated csv files - should not raise internal exception (by failed assertion).
+# group: [csv]
+
+require json
+
+statement ok
+PRAGMA enable_verification
+
+query I
+select count(file) from glob('./data/csv/afl/13867925310_csv_fuzz_error_hangs/*');
+----
+13
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_0.csv', auto_detect=true, compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_1.csv', compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_2.csv', compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_3.csv', compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_4.csv', compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_5.csv', compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_6.csv', compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_7.csv', compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_8.csv', auto_detect=true, compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_9.csv', sample_size=42, compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_10.csv', buffer_size=42, compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_11.csv', auto_detect=true, compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/13867925310_csv_fuzz_error_hangs/case_12.csv', hive_partitioning=true, compression='gzip');
+----
+

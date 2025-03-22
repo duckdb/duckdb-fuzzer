@@ -1,0 +1,62 @@
+[
+    {
+        "file_name": "case_0.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_1.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_2.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_3.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_4.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_5.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_6.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_7.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_8.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_9.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_10.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_11.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_12.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_13.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_14.json",
+        "arguments": "timestamp_format=-0\u0000\u0001\u000f4-0\u0000\u0001\u000f\u0001\u0001\u0001\"\"\"J\"\"\"\"\"\"\u0000\"\"\"\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0011!"
+    }
+]

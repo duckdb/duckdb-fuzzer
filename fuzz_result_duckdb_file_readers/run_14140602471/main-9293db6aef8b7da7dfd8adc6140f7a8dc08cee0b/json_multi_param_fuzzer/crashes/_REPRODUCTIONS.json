@@ -1,0 +1,62 @@
+[
+    {
+        "file_name": "case_0.json",
+        "arguments": "ignore_errors=false"
+    },
+    {
+        "file_name": "case_1.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_2.json",
+        "arguments": ""
+    },
+    {
+        "file_name": "case_3.json",
+        "arguments": ""
+    },
+    {
+        "file_name": "case_4.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_5.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_6.json",
+        "arguments": "records='false'"
+    },
+    {
+        "file_name": "case_7.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_8.json",
+        "arguments": "convert_strings_to_integers=true, sample_size=1"
+    },
+    {
+        "file_name": "case_9.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_10.json",
+        "arguments": ""
+    },
+    {
+        "file_name": "case_11.json",
+        "arguments": "dateformat='array'"
+    },
+    {
+        "file_name": "case_12.json",
+        "arguments": "hive_types_autocast=true"
+    },
+    {
+        "file_name": "case_13.json",
+        "arguments": "filename='array'"
+    },
+    {
+        "file_name": "case_14.json",
+        "arguments": "maximum_depth=42"
+    }
+]

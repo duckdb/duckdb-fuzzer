@@ -1,0 +1,74 @@
+# name: test/fuzzer/afl/json_multi_param_fuzzer-9293db6aef8b7da7dfd8adc6140f7a8dc08cee0b.test
+# description: fuzzer generated json files - should not raise internal exception (by failed assertion).
+# group: [json]
+
+require json
+
+statement ok
+PRAGMA enable_verification
+
+query I
+select count(file) from glob('./data/json/afl/14140602471_json_fuzz_error/*');
+----
+15
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_0.json', ignore_errors=false);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_1.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_2.json', );
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_3.json', );
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_4.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_5.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_6.json', records='false');
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_7.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_8.json', convert_strings_to_integers=true, sample_size=1);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_9.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_10.json', );
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_11.json', dateformat='array');
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_12.json', hive_types_autocast=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_13.json', filename='array');
+----
+
+statement maybe
+FROM read_json('data/json/afl/14140602471_json_fuzz_error/case_14.json', maximum_depth=42);
+----
+

@@ -1,0 +1,71 @@
+# name: test/fuzzer/afl/parquet_multi_param_fuzzer-9293db6aef8b7da7dfd8adc6140f7a8dc08cee0b.test
+# description: fuzzer generated parquet files - should not raise internal exception (by failed assertion).
+# group: [parquet]
+
+require parquet
+
+query I
+select count(file) from glob('./data/parquet-testing/afl/14140602471_parquet_fuzz_error/*');
+----
+15
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_0.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_1.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_2.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_3.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_4.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_5.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_6.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_7.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_8.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_9.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_10.parquet', binary_as_string=false, binary_as_string=false);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_11.parquet', );
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_12.parquet', binary_as_string=false, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_13.parquet', binary_as_string=true, filename=true);
+----
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14140602471_parquet_fuzz_error/case_14.parquet', filename=false);
+----
+

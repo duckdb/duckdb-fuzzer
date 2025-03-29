@@ -1,0 +1,66 @@
+# name: test/fuzzer/afl/csv_multi_param_fuzzer-5920da2406ffa651d7c79493c9188518de5229f4.test
+# description: fuzzer generated csv files - should not raise internal exception (by failed assertion).
+# group: [csv]
+
+require json
+
+statement ok
+PRAGMA enable_verification
+
+query I
+select count(file) from glob('./data/csv/afl/14140602471_csv_fuzz_error/*');
+----
+13
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_0.csv', auto_detect=false, buffer_size=42, columns={'json': 'JSON'}, delim='\0', rejects_limit=658694493994253607, store_rejects=true);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_1.csv', auto_detect=false, buffer_size=42, columns={'json': 'JSON'}, delim=NULL, rejects_limit=658694493994253607, store_rejects=true);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_2.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, header=false, quote=NULL);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_3.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, header=false, quote=NULL);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_4.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, header=false, quote=NULL);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_5.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, header=false, quote=NULL);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_6.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, header=false, quote=NULL);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_7.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, filename=false, header=false, quote=NULL);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_8.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, header=false, quote=NULL);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_9.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, header=false, quote=NULL);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_10.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, header=false, auto_detect=false);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_11.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, normalize_names=false, quote=NULL);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/14140602471_csv_fuzz_error/case_12.csv', auto_detect=false, columns={'json': 'JSON'}, delim=NULL, escape=NULL, header=false, quote=NULL);
+----
+

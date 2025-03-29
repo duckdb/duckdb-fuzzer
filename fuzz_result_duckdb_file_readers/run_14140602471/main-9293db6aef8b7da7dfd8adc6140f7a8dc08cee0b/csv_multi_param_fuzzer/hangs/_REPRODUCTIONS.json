@@ -1,0 +1,6 @@
+[
+    {
+        "file_name": "case_0.csv",
+        "arguments": "auto_detect=true, compression='gzip'"
+    }
+]

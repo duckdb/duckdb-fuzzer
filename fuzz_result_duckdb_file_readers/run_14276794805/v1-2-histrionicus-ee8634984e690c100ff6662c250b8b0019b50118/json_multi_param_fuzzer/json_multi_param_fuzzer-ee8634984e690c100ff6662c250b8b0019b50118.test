@@ -1,0 +1,22 @@
+# name: test/fuzzer/afl/json_multi_param_fuzzer-ee8634984e690c100ff6662c250b8b0019b50118.test
+# description: fuzzer generated json files - should not raise internal exception (by failed assertion).
+# group: [json]
+
+require json
+
+statement ok
+PRAGMA enable_verification
+
+query I
+select count(file) from glob('./data/json/afl/14276794805_json_fuzz_error/*');
+----
+2
+
+statement maybe
+FROM read_json('data/json/afl/14276794805_json_fuzz_error/case_0.json', convert_strings_to_integers=true, sample_size=1);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14276794805_json_fuzz_error/case_1.json', convert_strings_to_integers=true, sample_size=1);
+----
+

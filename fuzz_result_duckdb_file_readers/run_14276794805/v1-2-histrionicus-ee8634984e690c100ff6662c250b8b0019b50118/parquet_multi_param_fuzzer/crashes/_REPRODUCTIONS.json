@@ -1,0 +1,62 @@
+[
+    {
+        "file_name": "case_0.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_1.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_2.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_3.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_4.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_5.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_6.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_7.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_8.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_9.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_10.parquet",
+        "arguments": "filename=true"
+    },
+    {
+        "file_name": "case_11.parquet",
+        "arguments": "filename=false"
+    },
+    {
+        "file_name": "case_12.parquet",
+        "arguments": "filename=false"
+    },
+    {
+        "file_name": "case_13.parquet",
+        "arguments": "filename=false"
+    },
+    {
+        "file_name": "case_14.parquet",
+        "arguments": "filename=true"
+    }
+]

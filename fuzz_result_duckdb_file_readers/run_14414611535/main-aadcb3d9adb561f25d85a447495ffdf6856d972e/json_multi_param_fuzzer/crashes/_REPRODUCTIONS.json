@@ -1,0 +1,62 @@
+[
+    {
+        "file_name": "case_0.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_1.json",
+        "arguments": "sample_size=42"
+    },
+    {
+        "file_name": "case_2.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_3.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_4.json",
+        "arguments": "sample_size=2824092773499622235"
+    },
+    {
+        "file_name": "case_5.json",
+        "arguments": "sample_size=4686561017347527515"
+    },
+    {
+        "file_name": "case_6.json",
+        "arguments": "sample_size=4686561017347527515"
+    },
+    {
+        "file_name": "case_7.json",
+        "arguments": "sample_size=6575547282634134363"
+    },
+    {
+        "file_name": "case_8.json",
+        "arguments": "sample_size=4686561017347527515"
+    },
+    {
+        "file_name": "case_9.json",
+        "arguments": "sample_size=3544668469065765723"
+    },
+    {
+        "file_name": "case_10.json",
+        "arguments": "field_appearance_threshold=5.0061699052614576e-297"
+    },
+    {
+        "file_name": "case_11.json",
+        "arguments": "maximum_sample_files=3544668469065765723"
+    },
+    {
+        "file_name": "case_12.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_13.json",
+        "arguments": "ignore_errors=true"
+    },
+    {
+        "file_name": "case_14.json",
+        "arguments": "ignore_errors=true"
+    }
+]

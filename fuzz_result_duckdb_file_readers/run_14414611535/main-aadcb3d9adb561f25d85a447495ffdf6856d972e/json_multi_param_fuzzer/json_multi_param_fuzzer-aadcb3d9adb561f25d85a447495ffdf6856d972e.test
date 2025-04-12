@@ -1,0 +1,74 @@
+# name: test/fuzzer/afl/json_multi_param_fuzzer-aadcb3d9adb561f25d85a447495ffdf6856d972e.test
+# description: fuzzer generated json files - should not raise internal exception (by failed assertion).
+# group: [json]
+
+require json
+
+statement ok
+PRAGMA enable_verification
+
+query I
+select count(file) from glob('./data/json/afl/14414611535_json_fuzz_error/*');
+----
+15
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_0.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_1.json', sample_size=42);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_2.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_3.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_4.json', sample_size=2824092773499622235);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_5.json', sample_size=4686561017347527515);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_6.json', sample_size=4686561017347527515);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_7.json', sample_size=6575547282634134363);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_8.json', sample_size=4686561017347527515);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_9.json', sample_size=3544668469065765723);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_10.json', field_appearance_threshold=5.0061699052614576e-297);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_11.json', maximum_sample_files=3544668469065765723);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_12.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_13.json', ignore_errors=true);
+----
+
+statement maybe
+FROM read_json('data/json/afl/14414611535_json_fuzz_error/case_14.json', ignore_errors=true);
+----
+

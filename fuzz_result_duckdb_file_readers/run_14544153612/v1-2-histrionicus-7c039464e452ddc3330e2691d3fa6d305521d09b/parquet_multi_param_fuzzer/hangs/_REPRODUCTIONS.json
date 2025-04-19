@@ -1,0 +1,6 @@
+[
+    {
+        "file_name": "case_0.parquet",
+        "arguments": "binary_as_string=true, filename=true"
+    }
+]

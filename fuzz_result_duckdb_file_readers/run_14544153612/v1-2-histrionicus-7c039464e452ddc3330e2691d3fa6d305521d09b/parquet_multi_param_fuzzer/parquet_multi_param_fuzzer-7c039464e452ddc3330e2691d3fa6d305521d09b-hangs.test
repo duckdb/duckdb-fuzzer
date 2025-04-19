@@ -1,0 +1,15 @@
+# name: test/fuzzer/afl/parquet_multi_param_fuzzer-7c039464e452ddc3330e2691d3fa6d305521d09b-hangs.test
+# description: fuzzer generated parquet files - should not raise internal exception (by failed assertion).
+# group: [parquet]
+
+require parquet
+
+query I
+select count(file) from glob('./data/parquet-testing/afl/14544153612_parquet_fuzz_error_hangs/*');
+----
+1
+
+statement maybe
+FROM read_parquet('data/parquet-testing/afl/14544153612_parquet_fuzz_error_hangs/case_0.parquet', binary_as_string=true, filename=true);
+----
+

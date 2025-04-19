@@ -1,0 +1,62 @@
+[
+    {
+        "file_name": "case_0.csv",
+        "arguments": "auto_detect=false, buffer_size=8, columns={'a': 'integer','b': 'integer','c': 'integer'}, header=true, maximum_line_size=0"
+    },
+    {
+        "file_name": "case_1.csv",
+        "arguments": "auto_detect=false, buffer_size=8, columns={'a': 'integer','b': 'integer','c': 'integer'}, header=true, maximum_line_size=0"
+    },
+    {
+        "file_name": "case_2.csv",
+        "arguments": "auto_detect=false, buffer_size=8, columns={'a': 'integer','b': 'integer','c': 'integer'}, header=true, maximum_line_size=0"
+    },
+    {
+        "file_name": "case_3.csv",
+        "arguments": "delim='\\t', escape='', header=false, sep=''"
+    },
+    {
+        "file_name": "case_4.csv",
+        "arguments": "delim='\\t', escape='', header=false, delim=''"
+    },
+    {
+        "file_name": "case_5.csv",
+        "arguments": "delim='\\t', sep='', header=false, quote=''"
+    },
+    {
+        "file_name": "case_6.csv",
+        "arguments": "auto_detect=false, buffer_size=8, columns={'aaaaaaaaaaaaaaaa': 'integer','c': 'integer'}, header=true, maximum_line_size=0"
+    },
+    {
+        "file_name": "case_7.csv",
+        "arguments": "auto_detect=false, columns={'j': 'JSON'}, delim=''"
+    },
+    {
+        "file_name": "case_8.csv",
+        "arguments": "auto_detect=false, columns={'j': 'JSON'}, delim=''"
+    },
+    {
+        "file_name": "case_9.csv",
+        "arguments": "auto_detect=false, columns={'j': 'JSON'}, delim=''"
+    },
+    {
+        "file_name": "case_10.csv",
+        "arguments": "auto_detect=true, columns={'j': 'JSON'}, delim=''"
+    },
+    {
+        "file_name": "case_11.csv",
+        "arguments": "auto_detect=false, columns={'j': 'JSON'}, delim=''"
+    },
+    {
+        "file_name": "case_12.csv",
+        "arguments": "auto_detect=false, columns={'j': 'JSON'}, delim=''"
+    },
+    {
+        "file_name": "case_13.csv",
+        "arguments": "auto_detect=false, columns={'S': 'JSON'}, delim=''"
+    },
+    {
+        "file_name": "case_14.csv",
+        "arguments": "auto_detect=false, auto_detect=true, delim=''"
+    }
+]

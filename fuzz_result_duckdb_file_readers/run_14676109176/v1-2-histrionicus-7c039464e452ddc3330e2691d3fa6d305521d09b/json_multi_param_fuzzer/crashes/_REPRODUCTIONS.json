@@ -1,0 +1,14 @@
+[
+    {
+        "file_name": "case_0.json",
+        "arguments": "sample_size=2"
+    },
+    {
+        "file_name": "case_1.json",
+        "arguments": "sample_size=2"
+    },
+    {
+        "file_name": "case_2.json",
+        "arguments": "sample_size=2"
+    }
+]

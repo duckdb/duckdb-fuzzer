@@ -1,0 +1,14 @@
+[
+    {
+        "file_name": "case_0.csv",
+        "arguments": "auto_detect=false, buffer_size=5418, columns={'a': 'VARCHAR', 'b': 'INTEGER'}, header=true, max_line_size=10, store_rejects=true"
+    },
+    {
+        "file_name": "case_1.csv",
+        "arguments": "auto_detect=false, buffer_size=7210, columns={'a': 'VARCHAR', 'b': 'INTEGER'}, header=true, max_line_size=10, store_rejects=true"
+    },
+    {
+        "file_name": "case_2.csv",
+        "arguments": "auto_detect=false, buffer_size=8234, columns={'a': 'VARCHAR', 'b': 'INTEGER'}, comment=1, max_line_size=10, store_rejects=true"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "file_name": "case_0.json",
+        "arguments": "convert_strings_to_integers=true, sample_size=1"
+    },
+    {
+        "file_name": "case_1.json",
+        "arguments": "convert_strings_to_integers=true, sample_size=1"
+    },
+    {
+        "file_name": "case_2.json",
+        "arguments": "convert_strings_to_integers=true, sample_size=1"
+    },
+    {
+        "file_name": "case_3.json",
+        "arguments": "convert_strings_to_integers=true, sample_size=1"
+    },
+    {
+        "file_name": "case_4.json",
+        "arguments": "filename=1, sample_size=1"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "file_name": "case_0.csv",
+        "arguments": "store_rejects=true"
+    },
+    {
+        "file_name": "case_1.csv",
+        "arguments": "store_rejects=true"
+    },
+    {
+        "file_name": "case_2.csv",
+        "arguments": "auto_detect=true, compression='gzip'"
+    },
+    {
+        "file_name": "case_3.csv",
+        "arguments": "auto_detect=true, compression='gzip'"
+    }
+]

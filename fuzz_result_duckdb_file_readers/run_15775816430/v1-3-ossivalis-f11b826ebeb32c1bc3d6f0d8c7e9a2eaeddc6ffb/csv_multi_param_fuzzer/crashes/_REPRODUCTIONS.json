@@ -1,0 +1,30 @@
+[
+    {
+        "file_name": "case_0.csv",
+        "arguments": "auto_detect=false, buffer_size=8, columns={'a': 'integer','b': 'integer','c': 'integer'}, header=true, maximum_line_size=0"
+    },
+    {
+        "file_name": "case_1.csv",
+        "arguments": "buffer_size=30, delim=';', union_by_name=false, header=false, null_padding=true"
+    },
+    {
+        "file_name": "case_2.csv",
+        "arguments": "union_by_name=false, ignore_errors=false, all_varchar=false, all_varchar=true, allow_quoted_nulls=false"
+    },
+    {
+        "file_name": "case_3.csv",
+        "arguments": "union_by_name=false, ignore_errors=false, all_varchar=false, all_varchar=false, all_varchar=false"
+    },
+    {
+        "file_name": "case_4.csv",
+        "arguments": "buffer_size=30, delim=';', union_by_name=false, header=false, null_padding=true"
+    },
+    {
+        "file_name": "case_5.csv",
+        "arguments": "auto_detect=false, buffer_size=8, columns={'a': 'integer','b': 'integer','c': 'integer'}, header=true, maximum_line_size=0"
+    },
+    {
+        "file_name": "case_6.csv",
+        "arguments": "auto_detect=false, buffer_size=8, columns={'a': 'integer','b': 'integer','c': 'integer'}, header=true, maximum_line_size=0"
+    }
+]

@@ -1,0 +1,42 @@
+# name: test/fuzzer/afl/csv_multi_param_fuzzer-f11b826ebeb32c1bc3d6f0d8c7e9a2eaeddc6ffb.test
+# description: fuzzer generated csv files - should not raise internal exception (by failed assertion).
+# group: [csv]
+
+require json
+
+statement ok
+PRAGMA enable_verification
+
+query I
+select count(file) from glob('./data/csv/afl/15775816430_csv_fuzz_error/*');
+----
+7
+
+statement maybe
+FROM read_csv('data/csv/afl/15775816430_csv_fuzz_error/case_0.csv', auto_detect=false, buffer_size=8, columns={'a': 'integer','b': 'integer','c': 'integer'}, header=true, maximum_line_size=0);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/15775816430_csv_fuzz_error/case_1.csv', buffer_size=30, delim=';', union_by_name=false, header=false, null_padding=true);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/15775816430_csv_fuzz_error/case_2.csv', union_by_name=false, ignore_errors=false, all_varchar=false, all_varchar=true, allow_quoted_nulls=false);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/15775816430_csv_fuzz_error/case_3.csv', union_by_name=false, ignore_errors=false, all_varchar=false, all_varchar=false, all_varchar=false);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/15775816430_csv_fuzz_error/case_4.csv', buffer_size=30, delim=';', union_by_name=false, header=false, null_padding=true);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/15775816430_csv_fuzz_error/case_5.csv', auto_detect=false, buffer_size=8, columns={'a': 'integer','b': 'integer','c': 'integer'}, header=true, maximum_line_size=0);
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/15775816430_csv_fuzz_error/case_6.csv', auto_detect=false, buffer_size=8, columns={'a': 'integer','b': 'integer','c': 'integer'}, header=true, maximum_line_size=0);
+----
+

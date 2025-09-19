@@ -1,0 +1,22 @@
+# name: test/fuzzer/afl/csv_multi_param_fuzzer-74f64b65d43261269577645c0d6dc8966e629137-hangs.test
+# description: fuzzer generated csv files - should not raise internal exception (by failed assertion).
+# group: [csv]
+
+require json
+
+statement ok
+PRAGMA enable_verification
+
+query I
+select count(file) from glob('./data/csv/afl/17859978965_csv_fuzz_error_hangs/*');
+----
+2
+
+statement maybe
+FROM read_csv('data/csv/afl/17859978965_csv_fuzz_error_hangs/case_0.csv', auto_detect=true, compression='gzip');
+----
+
+statement maybe
+FROM read_csv('data/csv/afl/17859978965_csv_fuzz_error_hangs/case_1.csv', auto_detect=true, compression='gzip');
+----
+

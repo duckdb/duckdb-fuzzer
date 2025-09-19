@@ -1,0 +1,30 @@
+[
+    {
+        "file_name": "case_0.csv",
+        "arguments": "buffer_size=30, delim=';', header=false, null_padding=true, union_by_name=false"
+    },
+    {
+        "file_name": "case_1.csv",
+        "arguments": "buffer_size=30, delim=';', header=false, null_padding=true, union_by_name=false"
+    },
+    {
+        "file_name": "case_2.csv",
+        "arguments": "buffer_size=30, delim=';', header=false, null_padding=true, union_by_name=false"
+    },
+    {
+        "file_name": "case_3.csv",
+        "arguments": "buffer_size=30, delim=';', header=false, null_padding=true, union_by_name=false"
+    },
+    {
+        "file_name": "case_4.csv",
+        "arguments": "buffer_size=30, delim=';', header=false, null_padding=true, union_by_name=false"
+    },
+    {
+        "file_name": "case_5.csv",
+        "arguments": "buffer_size=30, delim=';', header=false, null_padding=true, union_by_name=false"
+    },
+    {
+        "file_name": "case_6.csv",
+        "arguments": "buffer_size=30, delim=';', header=false, null_padding=true, union_by_name=false"
+    }
+]

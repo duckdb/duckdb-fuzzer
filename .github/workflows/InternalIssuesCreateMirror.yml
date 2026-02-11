@@ -30,5 +30,32 @@ jobs:
       - name: Create or label issue
         run: |
           if [ "$MIRROR_ISSUE_NUMBER" == "" ]; then
-            gh issue create --repo duckdblabs/duckdb-internal --label "fuzzer" --title "$TITLE_PREFIX - $PUBLIC_ISSUE_TITLE" --body "See https://github.com/duckdb/duckdb-fuzzer/issues/${{ github.event.issue.number }}"
+            gh issue create --repo duckdblabs/duckdb-internal --label "fuzzer" --title "$TITLE_PREFIX - $PUBLIC_ISSUE_TITLE" --body "See https://github.com/duckdb/duckdb-fuzzer/issues/${{ github.event.issue.number }}" > issue_url.txt
+            echo "ISSUE_URL=$(cat issue_url.txt)" >> $GITHUB_ENV
           fi
+
+      # all ids in this step are static, so could be hard coded to speed-up this step
+      - name: Get Project Item Field IDs
+        if: env.ISSUE_URL
+        run: |
+          ENGINEERING_PROJECT_NUMBER=43
+          echo "ENGINEERING_PROJECT_NUMBER=$ENGINEERING_PROJECT_NUMBER" >> $GITHUB_ENV
+          echo "ENGINEERING_PROJECT_ID=$(gh project view $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq .id)" >> $GITHUB_ENV
+          echo "STATUS_FIELD_ID=$(gh project field-list $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq '.fields[] | select(.name == "Status") | .id')" >> $GITHUB_ENV
+          echo "PROJECT_FIELD_ID=$(gh project field-list $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq '.fields[] | select(.name == "Project") | .id')" >> $GITHUB_ENV
+          echo "OPTION_ID_STATUS_NEW=$(gh project field-list $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq '.fields[] | select(.name == "Status") | .options[] | select(.name == "New") | .id')" >> $GITHUB_ENV
+          echo "OPTION_ID_PROJECT_TESTING=$(gh project field-list $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq '.fields[] | select(.name == "Project") | .options[] | select(.name == "Testing") | .id')" >> $GITHUB_ENV
+
+      - name: Create Project Item
+        if: env.ISSUE_URL
+        run: |
+          echo "creating project item"
+          gh project item-add $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --url $ISSUE_URL --format json --jq .id > project_item_id.txt
+          echo "PROJECT_ITEM_ID=$(cat project_item_id.txt)" >> $GITHUB_ENV
+
+      - name: Set Project Item Status and Project Fields
+        if: env.ISSUE_URL
+        run: |
+          echo "updating project issue status"
+          gh project item-edit --project-id $ENGINEERING_PROJECT_ID --id $PROJECT_ITEM_ID --field-id $STATUS_FIELD_ID --single-select-option-id $OPTION_ID_STATUS_NEW
+          gh project item-edit --project-id $ENGINEERING_PROJECT_ID --id $PROJECT_ITEM_ID --field-id $PROJECT_FIELD_ID --single-select-option-id $OPTION_ID_PROJECT_TESTING

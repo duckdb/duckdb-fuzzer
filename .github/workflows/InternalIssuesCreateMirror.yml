@@ -35,16 +35,21 @@ jobs:
           fi
 
       # all ids in this step are static, so could be hard coded to speed-up this step
+      # The `Project` field is being renamed to `Subdomain`, and status `New` to `Needs Triage`;
+      # the lookups accept both names until the rename is done.
       - name: Get Project Item Field IDs
         if: env.ISSUE_URL
         run: |
           ENGINEERING_PROJECT_NUMBER=43
           echo "ENGINEERING_PROJECT_NUMBER=$ENGINEERING_PROJECT_NUMBER" >> $GITHUB_ENV
           echo "ENGINEERING_PROJECT_ID=$(gh project view $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq .id)" >> $GITHUB_ENV
-          echo "STATUS_FIELD_ID=$(gh project field-list $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq '.fields[] | select(.name == "Status") | .id')" >> $GITHUB_ENV
-          echo "PROJECT_FIELD_ID=$(gh project field-list $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq '.fields[] | select(.name == "Project") | .id')" >> $GITHUB_ENV
-          echo "OPTION_ID_STATUS_NEW=$(gh project field-list $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq '.fields[] | select(.name == "Status") | .options[] | select(.name == "New") | .id')" >> $GITHUB_ENV
-          echo "OPTION_ID_PROJECT_TESTING=$(gh project field-list $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq '.fields[] | select(.name == "Project") | .options[] | select(.name == "Testing") | .id')" >> $GITHUB_ENV
+          FIELDS=$(gh project field-list $ENGINEERING_PROJECT_NUMBER --owner duckdblabs --format json --jq '.fields')
+          SUBDOMAIN_FIELD=$(jq -c '(map(select(.name == "Subdomain")) + map(select(.name == "Project")))[0]' <<< "$FIELDS")
+          STATUS_FIELD=$(jq -c 'map(select(.name == "Status"))[0]' <<< "$FIELDS")
+          echo "STATUS_FIELD_ID=$(jq -r '.id' <<< "$STATUS_FIELD")" >> $GITHUB_ENV
+          echo "PROJECT_FIELD_ID=$(jq -r '.id' <<< "$SUBDOMAIN_FIELD")" >> $GITHUB_ENV
+          echo "OPTION_ID_STATUS_NEW=$(jq -r '.options | (map(select(.name == "Needs Triage")) + map(select(.name == "New")))[0].id' <<< "$STATUS_FIELD")" >> $GITHUB_ENV
+          echo "OPTION_ID_PROJECT_TESTING=$(jq -r '.options[] | select(.name == "Testing") | .id' <<< "$SUBDOMAIN_FIELD")" >> $GITHUB_ENV
 
       - name: Create Project Item
         if: env.ISSUE_URL
